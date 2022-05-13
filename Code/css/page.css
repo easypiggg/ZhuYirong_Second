@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.fr {
+    float: right;
+}
+.fl {
+    float: left;
+}
+body {
+    width: 430px;
+    margin: auto;
+}
+input {
+    outline:  none;
+}
+textarea {
+    outline: none;
+}
+/* 页面模块 */
+.page {
+    position: relative;
+    width: 430px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* display: none; */
+}
+
+/* 底部模块 */
+.page footer {
+    /* position: absolute; */
+    position: fixed;
+    bottom: 0;
+    width: 443px;
+    height: 50px;
+    background-color: #fff;
+}
+
+.page footer ul {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.page footer ul li {
+    position: relative;
+    width: 130px;
+    height: 100%;
+}
+
+.page footer ul li span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+    font-size: 13px;
+}
+
+.page footer ul li .iconfont {
+    top: 5px;
+    font-size: 20px;
+}
+
+.page footer ul .current {
+    color: rgb(155, 106, 208);
+}

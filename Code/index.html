@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入字体图标文件 -->
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <!-- 引入css -->
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/format.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/mymessage.css">
+    <link rel="stylesheet" href="css/personcenter.css">
+</head>
+
+<body>
+    <!-- 登录页面 -->
+    <div class="loginpage" id="loginpage">
+        <video  autoplay loop muted>
+            <source src="images/rainy.mp4" >
+        </video>
+        <div class="login">
+            <form class="login-form">
+                <p>请输入您的信息</p>
+                <input type="text" name="username" id="username" placeholder=" 用户名">
+                <input type="password" name="password" id="password" placeholder=" 用户密码">
+                <div class="go-register"><a href="#">没有账号?去注册</a></div>
+                <input type="button" class="login-btn" value="提交" >
+            </form>      
+        </div> 
+        <div class="register">
+            <form class="register-form" action="">
+                <p>请输入您的信息</p>
+                <input type="text" id="register-tel" name="" placeholder=" 注册手机号"><div class="send btn">发送</div>
+                <input type="password" id="register-psw" name="" placeholder=" 注册密码">
+                <input type="text" id="register-surepasw" name="" placeholder=" 输入验证码" ><div class="sure btn">确认</div>
+                <div class="go-login"><a href="#">已有账号?去登录</a></div>
+                <div class="register-btn">注册</div>
+            </form>      
+        </div>
+    </div>
+    <!-- 文章详情页 -->
+    <div class="item-detail">
+        <header>
+            <div class="fl iconfont item-back">&lt;</div>
+            <div class="author">
+                <div class="author-tx"><img src="" alt=""></div>
+                <div class="author-name">lala</div>
+                <div class="author-focus"></div>
+            </div>
+            <div class="fr">
+                <span class="share iconfont">&#xe60f;</span>
+            </div>
+            <div class="article-delete iconfont">&#xe74b;</div>
+        </header>
+            <div class="top"></div>
+        <div class="article">
+            <div class="article-img">
+                <ol></ol>
+                <ul></ul>
+            </div>
+            <div class="article-title"></div>
+            <div class="article-content"></div>
+            <div class="article-tags"></div>
+            <div class="article-time">
+                <div class="fl"></div>
+                <div class="fr"><span class="iconfont">&#xe638;</span>不喜欢</div>
+            </div>
+        </div>
+        <div class="comments">
+            <div class="comments-num">共<span>1</span>条评论</div>
+            <div class="saysomething">
+                <div class="comments-tx"><img src="" alt=""></div>
+                <input type="text" placeholder="说点什么吧,万一火了呢~" class="article-comment">
+            </div>
+            <div class="comment-box" id="comment-box"></div>
+            <div class="bottom"></div>
+        </div>
+
+        <footer>
+            <input type="text" class="article-comment" placeholder="说点什么...">
+            <div class="fr">
+                <div class="article-likes">
+                    <span class="iconfont">&#xe670;</span>
+                    <span class="iconfont scale">&#xe85c;</span>
+                    <span class="likes-num"></span>
+                </div>
+                <div class="article-collect">
+                    <span class="iconfont">&#xe66f;</span>
+                    <span class="iconfont scale">&#xe610;</span>
+                    <span class="collect-num"></span>
+                </div>
+                <div class="article-readcom">
+                    <span class="iconfont">&#xe669;</span>
+                    <span class="com-num"></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- item模板 -->
+    <div class="item" id="item">
+        <div class="item-img">
+            <img src="images/lazyload.jpg" alt="" class="item-images">
+        </div>
+        <div class="item-title"></div>
+        <div class="item-author">
+            <div class="item-tx">
+                <img src="" alt="">
+            </div>
+            <span class="item-name"></span>
+            <div class="fr">
+                <span class="item-likes iconfont">&#xe670;</span>
+                <span class="item-num">2</span>
+            </div>
+        </div>
+    </div>
+    <!-- 用户小框模板 -->
+    <div class="userformat" id="user">
+        <div class="user-tx">
+            <img src="" alt="">
+        </div>
+        <div class="user-name">zyr</div>
+        <div class="user-description">hello</div>
+        <div class="user-focus">未关注</div>
+    </div>
+    <!-- 赞了的笔记模板 -->
+    <div class="likenote-format" id="likenote-format">
+        <div class="user-tx">
+            <img src="" alt="">
+        </div>
+        <div class="user-name">zyr</div>
+        <div class="user-description">hello</div>
+        <div class="img-box">
+            <img src="" alt="">
+        </div>
+    </div>
+    <!-- 对话小框模板 -->
+    <div class="chat-box" id="chatbox">
+        <div class="chatbox-tx">
+            <img src="images/Robot.jpg" alt="">
+        </div>
+        <div class="chatbox-name">Robot</div>
+        <div class="chatbox-description">我是机器人</div>
+        <span class="iconfont">&#xe668;</span>
+    </div>
+    <!-- 评论模板 -->
+    <div class="comment-format" id="comment">
+        <div class="comment-tx">
+            <img src="" alt="">
+        </div>
+        <div class="comment-name">zyr</div>
+        <div class="comment-content">lala</div>
+        <div class="comment-time">20-20</div>
+        <div class="comment-like">
+            <span class="iconfont">&#xe670;</span>
+            <span class="comment-num">1</span>
+            <span class="iconfont comment-delete">&#xe74b;</span>
+        </div>
+        <!-- <label for=""><input type="text" placeholder="输入回复内容" class="replycontent"><span>发送</span></label> -->
+        <div class="reply-container"></div>
+    </div>
+    <!-- 个人主页模板 -->
+    <div class="userhp-format" id="userhp">
+        <div class="header "><span class="iconfont userhp-back">&#xe609;</span></div>
+        <div class="userhp-tx">
+            <img src="" alt="">
+        </div>
+        <div class="userhp-name"></div>
+        <ul>
+            <li class="focus current">
+                <span></span>
+                <span>关注</span>
+            </li>
+            <li class="fans">
+                <span></span>
+                <span>粉丝</span>
+            </li>
+            <li class="likes">
+                <span></span>
+                <span>点赞与收藏</span>
+            </li>
+        </ul>
+        <div class="sendmessage">发消息</div>
+        <ol class="userhp-nav">
+            <li class="current">笔记</li>
+            <li>收藏</li>
+            <li>赞过</li>
+        </ol>
+        <div class="post-note"></div>
+        <div class="star-note"></div>
+        <div class="like-note"></div>
+    </div>
+    <!-- 聊天页面模板 -->
+    <div class="chatpage" id="chatpage">
+        <header>
+            <span class="iconfont fl chatpage-back">&#xe609;</span>
+            <span class="receiver-name">zyr</span>
+            <div class="fl"></div>
+        </header>
+        <div class="dialog-container" id="dialog-container"></div>
+        <footer>
+            <label for=""><input type="text" class="post-content" placeholder="请输入内容"><span class="postbtn">发送</span></label>
+        </footer>
+    </div>
+    <!-- 聊天对话框模板 -->
+    <!-- 我的对话框 -->
+    <div class="u-dialogbox" id="u-dialogbox">
+        <div class="fl">
+            <img src="" alt="">
+        </div>
+        <div class="fr">
+            <span> 666</span>
+            <div class="triangle"></div>
+        </div>
+    </div>
+    <!-- 对方的对话框 -->
+    <div class="m-dialogbox" id="m-dialogbox">
+        <div class="fl">
+            <img src="" alt="">
+        </div>
+        <div class="fr">
+            <span> 666</span>
+            <div class="triangle"></div>
+        </div>
+    </div>
+    <!-- 主页 -->
+    <div class="page" id="page">
+        <div class="pages">
+            <!-- 首页模块 -->
+            <div class="homepage" id="homepage">
+                <header class="w">
+                    <div class="fl"><span class="go-write iconfont">&#xe727;</span></div>
+                    <span class="center">首页</span>
+                    <div class="fr"><span class="go-search iconfont">&#xe651;</span></div>
+                </header>
+                <div class="content">
+                    <ol class="nav">
+                        <li class="navli tuijian">
+                            <span class=" current">推荐</span>
+                        </li>
+                        <li class="navli">
+                            <span>旅行</span>
+                        </li>
+                        <li class="navli">
+                            <span>美食</span>
+                        </li>
+                        <li class="navli">
+                            <span>时尚</span>
+                        </li>
+                        <li class="navli">
+                            <span>彩妆</span>
+                        </li>
+                        <li class="navli">
+                            <span>高效</span>
+                        </li>
+                        <li class="navli">
+                            <span>护肤</span>
+                        </li>
+                    </ol>
+                    <p class="top"></p>
+                    <div class="recom content-box"></div>
+                    <div class="travel content-box"></div>
+                    <div class="food content-box"></div>
+                    <div class="fashion content-box"></div>
+                    <div class="makeup content-box"></div>
+                    <div class="efficient content-box"></div>
+                    <div class="skincare content-box"></div>
+                </div>
+            </div>
+            <!-- 我的消息 -->
+            <div class="mymessage" id="mymessage">
+                <header>
+                    <div class="fl message-back"><span>&lt;</span></div>
+                    <span>消息</span>
+                    <div class="fr"><span>创建聊天</span></div>
+                </header>
+                <div class="m-more">
+                    <ul>
+                        <li class="m-likes">
+                            <span class="iconfont">&#xe603;</span>
+                            <span>赞与收藏</span>
+                        </li>
+                        <li class="m-focus">
+                            <span class="iconfont">&#xe608;</span>
+                            <span>新增关注</span>
+                        </li>
+                        <li class="m-comments">
+                            <span class="iconfont">&#xe63c;</span>
+                            <span>评论和@</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chatcontainer"></div>
+            </div>
+            <!-- 个人中心 -->
+            <div class="personcenter" id="personcenter">
+                <header>
+                    <div class="fl"><span class="iconfont">&#xe605;</span></div>
+                    <div class="fr logout"><span class="iconfont">&#xe60f;</span></div>
+                </header>
+                <div class="p-information">
+                    <div class="inform">
+                        <div class="headphoto">
+                            <img src="" alt="">
+                        </div>
+                        <div class="nickname">lala</div>
+                    </div>
+                    <div class="p-more">
+                        <ul>
+                            <li class="focus current">
+                                <span>2</span>
+                                <span>关注</span>
+                            </li>
+                            <li class="fans">
+                                <span>4</span>
+                                <span>粉丝</span>
+                            </li>
+                            <li class="likes">
+                                <span>7</span>
+                                <span>点赞与收藏</span>
+                            </li>
+                        </ul>
+                        <button class="go-php">编辑资料</button>
+                    </div>
+                </div>
+                <div class="p-main">
+                    <ol class="userhp-nav">
+                        <li class="current seepost">笔记</li>
+                        <li class="seestar">收藏</li>
+                        <li class="seelike">赞过</li>
+                    </ol>
+                    <div class="postnote"></div>
+                    <div class="starnote"></div>
+                    <div class="likenote"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部模块 -->
+        <footer class="w">
+            <ul>
+                <li class="current h-page">
+                    <span class="iconfont">&#xe61a;</span>
+                    <span>首页</span>
+                </li>
+                <li class="m-message">
+                    <span class="iconfont">&#xe616;</span>
+                    <span>我的消息</span>
+                </li>
+                <li class="p-center">
+                    <span class="iconfont">&#xe689;</span>
+                    <span>个人中心</span>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <!-- 首页写文章模块 -->
+    <div class="write">
+        <header><span class="wri-back">&lt;</span></header>
+        <form id="write-form">
+            <div class="img-container">
+                <div class="img-box">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="file-box">
+                <label for="">+<input type="file" name="images" class="file"></label>
+            </div>
+            <input type="text" name="title" class="title" placeholder="填写标题会有更多赞哦~">
+            <input type="text" name="content" class="content" placeholder="添加正文"></input>
+            <div class="box">
+                <div class="topic">#话题</div>
+                <div class="yonghu">@用户</div>
+            </div>
+            <label for="" class="tag-label">#<input type="text" class="tags"></input></label>
+            <div class="post-btn">发布笔记</div>
+        </form>
+        <div class="tags-box">
+            <input class="tags-content" placeholder="请输入要添加的Tag"></input>
+            <ul class="tags-choice">
+                <li class="tags-cancel">取消</li>
+                <li class="tags-sure">确定</li>
+            </ul>
+        </div>
+        <div class="mask"></div>
+    </div>
+    <!-- 首页搜索模块 -->
+    <div class="search">
+        <header>
+            <div class="sea-back fl"><span>&lt;</span></div>
+            <input type="text" class="input-search" placeholder="请输入搜索内容">
+            <div class="fr">
+                <div class="search-btn ">搜索</div>
+            </div>
+        </header>
+        <ol>
+            <li class="current search-article"><span>文章</span></li>
+            <li class="search-user"><span>用户</span></li>
+        </ol>
+        <div class="search-box columns"></div>
+    </div>
+    <!-- 个人中心编辑资料 -->
+    <div class="p-homepage">
+        <header>
+            <div class="php-back fl"><span class="iconfont">&#xe609;</span></div>
+            <span>编辑资料</span>
+        </header>
+        <div class="ph-main">
+            <form class="edit" action="">
+                <div class="tx">
+                    <div class="img-box">
+                        <img src="" alt="">
+                    </div>
+                    <div class="">
+                        <img src="" alt="">
+                    </div>
+                    <label for="avatar" class="avatarlabel">头像<input type="file" name="avatar" class="avatar" /></label>
+                </div>
+                <label for="nickname">名字<span class="iconfont">&#xe668;</span><input type="text"
+                        class="nickname"></label>
+                <label for="gender">性别<span class="iconfont">&#xe668;</span><input type="text" class="gender"></label>
+                <label for="birthday">生日<span class="iconfont">&#xe668;</span><input type="text"
+                        class="birthday"></label>
+                <label for="area">地区<span class="iconfont">&#xe668;</span><input type="text" class="area"></label>
+                <label for="description">简介<span class="iconfont">&#xe668;</span><input type="text"
+                        class="description"></label>
+                <label for="backGroundPicture">
+                    <span class="iconfont">&#xe668;</span>
+                    背景图<input type="file" class="backGroundPicture">
+                    <div class="bg-img">
+                        <img src="" alt="">
+                    </div>
+                </label>
+            </form>
+        </div>
+        <div class="inform-sure">
+            <div>确定修改信息吗？</div>
+            <ul>
+                <li class="cancel-modify">取消</li>
+                <li class="sure-modify">确定</li>
+            </ul>
+        </div>
+        <div class="mask"></div>
+    </div>
+    <!-- 个人中心关注 -->
+    <div class="focus-page">
+        <header>
+            <div class="focus-back fl"><span>&lt;</span></div>
+            <span>关注</span>
+        </header>
+        <div class="myfocusperson"></div>
+    </div>
+    <!-- 我的消息赞与收藏 -->
+    <div class="mlikes-page">
+        <header>
+            <div class="mlikes-back fl"><span class="iconfont">&#xe609;</span></div>
+            <span>获赞与收藏</span>
+        </header>
+        <ul>
+            <li class="current likeperson-btn">获赞</li>
+            <li class="starperson-btn">收藏</li>
+        </ul>
+        <div class="likeperson"></div>
+        <div class="starperson"></div>
+    </div>
+    <!-- 我的消息新增关注 -->
+    <div class="mfocus-page">
+        <header>
+            <div class="mfocus-back fl"><span>&lt;</span></div>
+            <span>粉丝</span>
+        </header>
+        <div class="focusperson"></div>
+    </div>
+    <!-- 我的消息评论和@ -->
+    <div class="mcomments-page">
+        <header>
+            <div class="mcomments-back fl"><span>&lt;</span></div>
+            <span>收到的评论和@</span>
+        </header>
+        <div class="commentperson"></div>
+    </div>
+</body>
+<!-- 引入js -->
+<script src="js/debounce.js"></script>
+<script src="js/login.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/format.js"></script>
+<script src="js/getpages.js"></script>
+<script src="js/homepage.js"></script>
+<script src="js/write.js"></script>
+<script src="js/search.js"></script>
+<script src="js/personcenter.js"></script>
+<script src="js/mymessage.js"></script>
+</html>

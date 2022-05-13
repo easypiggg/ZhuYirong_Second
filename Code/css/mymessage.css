@@ -1,0 +1,100 @@
+/* 我的消息 */
+.mymessage {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.mymessage header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.mymessage .m-more ul {
+    display: flex;
+    width: 430px;
+    height: 80px;
+}
+
+.mymessage .m-more ul li {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+
+.mymessage .m-more ul li span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+}
+
+.mymessage .m-more ul li span:first-child {
+    top: 20px;
+    font-size: 20px;
+}
+
+.m-likes span:first-child {
+    color: rgb(222, 122, 116);
+}
+
+.m-focus span:first-child {
+    color: rgb(99, 142, 236);
+}
+
+.m-comments span:first-child {
+    color: rgb(121, 203, 161);
+}
+
+/* 赞与收藏 */
+.mlikes-page{
+    width: 430px;
+    display: none;
+}
+.mlikes-page header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;;
+}
+.mlikes-page ul {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+.mlikes-page ul li {
+    height: 100%;
+}
+.mlikes-page ul .current {
+    color: rgb(155, 107, 207);
+    border-bottom: 2px solid rgb(155, 107, 207);
+}
+
+/* 新增关注 */
+.mfocus-page{
+    width: 430px;
+    display: none;
+}
+.mfocus-page header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+/* 收到的评论和@  */
+.mcomments-page{
+    width: 430px;
+    display: none;
+}
+.mcomments-page header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}

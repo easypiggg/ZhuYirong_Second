@@ -1,0 +1,290 @@
+/* 个人中心 */
+.personcenter {
+    width: 430px;
+    display: none;
+}
+
+.personcenter header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.personcenter .p-information {
+    width: 100%;
+    height: 180px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.personcenter .p-information .inform {
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+.personcenter .p-information .headphoto {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.personcenter .p-information .nickname {
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    transform: translateY(-50%);
+}
+.personcenter .p-information .headphoto img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.personcenter .p-information .p-more ul {
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 60px;
+    margin-top: 20px;
+}
+
+.personcenter .p-information .p-more ul li span {
+    display: block;
+    text-align: center;
+    padding-top: 3px;
+    color: #999;
+}
+
+.personcenter .p-information .p-more ul .current span {
+    border-bottom: 0;
+    color: rgb(155, 106, 208);
+}
+
+.personcenter .p-information .p-more button {
+    float: right;
+    width: 80px;
+    height: 30px;
+    margin-top: 30px;
+    margin-right: 10px;
+    color: #666;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.personcenter .p-main {
+    width: 100%;
+    height: 40px;
+}
+
+.personcenter .p-main>ol {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.personcenter .p-main ol .current {
+    display: block;
+    color: rgb(155, 106, 208);
+    border-bottom: 3px solid rgb(155, 106, 208);
+}
+
+.personcenter .postnote,
+.personcenter .starnote,
+.personcenter .likenote {
+    column-count: 2;
+    padding-bottom: 50px;
+}
+
+.personcenter .starnote,
+.personcenter .likenote {
+    display: none;
+}
+
+.p-bottom {
+    width: 100%; 
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+}
+/* 粉丝页面 */
+.fans-page {
+    width: 430px;
+    display: none;
+}
+.fans-page header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: pink;
+}
+
+/* 用户的关注 */
+.focus-page {
+    width: 430px;
+    display: none;
+}
+.focus-page header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+/* 登录用户个人主页 */
+.p-homepage {
+    width: 430px;
+    display: none;
+}
+.p-homepage header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.p-homepage .ph-main .tx  {
+    position: relative;
+    width: 430px;
+    height: 150px;
+    border-bottom: 1px solid rgb(245, 245, 245);
+} 
+.p-homepage .ph-main .tx input {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+
+}
+.p-homepage .ph-main .tx .avatarlabel {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+}
+.p-homepage .ph-main .img-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.p-homepage .ph-main .tx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+.p-homepage .ph-main label {
+    display: block;
+    width: 430px;
+    height: 50px;
+    line-height:50px;
+    color: rgb(154, 154, 154);
+    border-bottom: 1px solid rgb(245, 245, 245);
+}
+
+.p-homepage .ph-main .iconfont {
+    float: right;
+}
+
+.p-homepage .ph-main input[type='text'] {
+    float: right;
+    border: 0;
+    height: 50px;
+    text-align: right;
+}
+ 
+.p-homepage .ph-main input[type='text']::after {
+    content: '\e668 ';
+    font-family: 'iconfont';
+    color: rgb(204, 204, 204)
+}
+.p-homepage .ph-main label:last-of-type {
+    position: relative;
+    height: 70px;
+    line-height: 70px;
+}
+.p-homepage .ph-main .backGroundPicture {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    opacity: 0;
+} 
+.p-homepage .ph-main .bg-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.p-homepage .ph-main  .bg-img img {
+    width: 100%;
+}
+
+.p-homepage .inform-sure {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.p-homepage .inform-sure div:first-child {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+.p-homepage .inform-sure ul {
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+.p-homepage .inform-sure ul li {
+    flex: 1;
+    text-align: center;
+    line-height: 40px;
+}
+.p-homepage .inform-sure ul li:first-child {
+    border-right: 1px solid rgb(204, 204, 204);
+}
+.p-homepage .mask {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
